@@ -1,0 +1,21 @@
+version: '3'
+
+services:
+  homepage:
+    build: ./src/homepage/
+    ports:
+      - 3000:3000
+    volumes:
+      - ./src/homepage/:/app
+
+  nginx:
+    image: nginx:1-alpine
+    ports:
+      - 80:80
+      - 443:443
+    volumes:
+      - ./src/nginx:/etc/nginx/conf.d
+    depends_on:
+      - homepage
+
+
