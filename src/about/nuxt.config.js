@@ -1,6 +1,10 @@
 import colors from 'vuetify/es5/util/colors'
 
 export default {
+	// * Set base URL that this application will be running from (e.g. `/` to `/about/`)
+	router: {
+		base: '/about/',
+	},
 	mode: 'universal',
 	/*
 	** Headers of the page

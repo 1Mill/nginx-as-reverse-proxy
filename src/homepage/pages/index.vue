@@ -4,6 +4,7 @@
     justify-center
     align-center
   >
+	<h1>HOMEPAGE MICROSERVICE</h1>
     <v-flex
       xs12
       sm8
