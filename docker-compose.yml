@@ -13,13 +13,11 @@ services:
     volumes:
       - ./src/homepage:/app
 
-  nginx:
-    image: nginx:1-alpine
-    ports:
-      - 80:80
-      - 443:443
-    volumes:
-      - ./src/nginx:/etc/nginx/conf.d
+  reverse-proxy:
+    build: ./src/reverse-proxy
     depends_on:
       - about
       - homepage
+    ports:
+      - 443:443
+      - 80:80
