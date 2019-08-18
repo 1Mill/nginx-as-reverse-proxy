@@ -3,10 +3,11 @@ version: '3'
 services:
   about:
     build: ./src/about
-    ports:
-      - 3000:3000
     volumes:
       - ./src/about:/app
+
+  global-navigation:
+    build: ./src/global-navigation
 
   homepage:
     build: ./src/homepage
