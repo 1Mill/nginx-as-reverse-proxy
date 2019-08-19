@@ -8,6 +8,8 @@ services:
 
   global-navigation:
     build: ./src/global-navigation
+    ports:
+      - 3001:80
 
   homepage:
     build: ./src/homepage
