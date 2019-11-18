@@ -20,6 +20,7 @@ services:
     build: ./src/reverse-proxy
     depends_on:
       - about
+      - global-navigation
       - homepage
     ports:
       - 443:443
